@@ -1,7 +1,7 @@
-import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
 import { useFonts } from "@expo-google-fonts/inter";
 import AppLoading from "expo-app-loading";
+import Button from "./src/_components/Button";
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -11,10 +11,12 @@ export default function App() {
 
   return fontsLoaded ? (
     <View style={styles.container}>
-      <Text style={{ fontFamily: "biennale-bold" }}>
-        Fonte de Vida e de beleza rara.
-      </Text>
-      <StatusBar style="auto" />
+      <Button
+        onPress={() => {}}
+        placeholder="Clique aqui"
+        loading={false}
+        disabled={false}
+      />
     </View>
   ) : (
     <AppLoading />
